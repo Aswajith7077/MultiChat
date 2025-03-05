@@ -1,12 +1,13 @@
 from sqlmodel import Field,Session,SQLModel,create_engine,select
 from typing import Annotated
 from fastapi import FastAPI,Depends,Path,HTTPException
- 
+from Config.config import config
 
 
 # def connection():
-sqlite_file_name = "database.db"
-sqlite_url = f"sqlite:///{sqlite_file_name}"
+
+sqlite_url = config['DB_URL']
+
 
 connect_args = {"check_same_thread":False}
 engine = create_engine(sqlite_url,connect_args = connect_args)

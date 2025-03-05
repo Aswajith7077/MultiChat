@@ -91,3 +91,13 @@ insertRegex.py -> Insert Values into Redirection Table
 
 insertFileRedirects.py -> Insert Values into FileRedirection Table
 
+# Docker building 
+
+```bash
+docker build -t multichat .
+```
+
+
+```bash
+docker run -d --name multichat -p 80:80 --env-file .env multichat
+```

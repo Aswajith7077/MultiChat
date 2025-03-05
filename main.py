@@ -3,7 +3,7 @@ from fastapi.responses import JSONResponse,HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
 from typing import Optional,Annotated
 from fastapi.security import OAuth2PasswordBearer
-from connection import Session,getSession,create_db_and_tables
+from Config.connection import Session,getSession,create_db_and_tables
 from Schemas.models import AIModel,AIResponse, Redirection,FileRedirection
 from RequestSchema.chatCompletions import ChatCompletions as CC,Completions,Redirects
 from sqlmodel import select,text
